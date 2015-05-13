@@ -1,0 +1,15 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+
+    <string name="app_name">ManETS</string>
+    <string name="hello_world">Welcome to wonderful world of Android dev!</string>
+    <string name="action_settings">Settings</string>
+
+    <string name="button_tt_play">Play</string>
+    <string name="button_tt_pause">Pause</string>
+    <string name="button_tt_previous">Prev</string>
+    <string name="button_tt_next">Next</string>
+    
+    
+    
+</resources>
