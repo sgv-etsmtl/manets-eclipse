@@ -16,4 +16,6 @@
     <string name="button_tt_pause">Pause</string>
     <string name="button_tt_previous">Prev</string>
     <string name="button_tt_next">Next</string>
+    <string name="button_tt_stop">Stop</string>
+    
 </resources>

@@ -9,6 +9,7 @@
     tools:context="com.example.mediaserver785.MediaServerActivity" >
 
     <TextView
+        android:id="@+id/textView_songTitle"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:text="@string/hello_world" />
@@ -37,10 +38,18 @@
         android:id="@+id/buttonPrev"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:layout_alignLeft="@+id/textView1"
+        android:layout_alignLeft="@+id/textView_songTitle"
         android:layout_centerVertical="true"
         android:onClick="prev"
         android:text="@string/button_tt_previous" />
-    
+
+    <Button
+        android:id="@+id/buttonStop"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_below="@+id/buttonPlayPause"
+        android:layout_centerHorizontal="true"
+        android:onClick="stopSong"
+        android:text="@string/button_tt_stop" />
     
 </RelativeLayout>

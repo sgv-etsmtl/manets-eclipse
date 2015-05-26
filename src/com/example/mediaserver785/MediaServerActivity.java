@@ -13,6 +13,8 @@ import android.util.Log;
 import android.view.Menu;
 import android.view.MenuItem;
 import android.view.View;
+import android.widget.Button;
+import android.widget.TextView;
 
 public class MediaServerActivity extends Activity {
 
@@ -86,6 +88,7 @@ public class MediaServerActivity extends Activity {
     		if( this.mediaplayer.isPlaying()){
     	    	this.mediaplayer.pause();	
     	    	Log.d("MediaOP", "pause");
+    	    	((Button) findViewById(R.id.buttonPlayPause)).setText(R.string.button_tt_play);
     		}
     		else{
     			playSong();
@@ -116,13 +119,19 @@ public class MediaServerActivity extends Activity {
     	}
     }
     
+    public void stopSong(View v){
+    	this.mediaplayer.stop();
+    	((Button) findViewById(R.id.buttonPlayPause)).setText(R.string.button_tt_play);
+
+    }
+    
     public void setCurrentID(int newID){
     	this.currentFileID = newID;
     	}
     
     public void playSong(){
     	Log.d("MediaOP", "BEFOREPlaying : "+this.currentFilePath);
-
+    	 ((TextView) findViewById(R.id.textView_songTitle)).setText("Now playing :  \n"+this.currentFilePath);
     	try {
     		this.mediaplayer.stop();
     		this.mediaplayer.release();
@@ -144,6 +153,8 @@ public class MediaServerActivity extends Activity {
 		}
     	this.mediaplayer.start();
     	Log.d("MediaOP", "Playing : "+this.currentFilePath);
+    	((Button) findViewById(R.id.buttonPlayPause)).setText(R.string.button_tt_pause);
+
 
     }
     
